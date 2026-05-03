@@ -1,5 +1,5 @@
-Hux Blog User Manual
-====================
+Mahmoud Youssef Blog User Manual
+===============================
 
 * Basics
 	* [Getting Started](#getting-started)
@@ -53,16 +53,16 @@ You can easily customize the blog by modifying `_config.yml`:
 
 ```yml
 # Site settings
-title: Hux Blog             # title of your website
-SEOTitle: Hux Blog          # check out docs for more detail
-description: "Cool Blog"    # ...
+title: Mahmoud Youssef
+SEOTitle: Mahmoud Youssef | Personal Blog
+description: "Personal blog by Mahmoud Youssef"
 
 # SNS settings      
-github_username: huxpro     # modify this account to yours
-weibo_username: huxpro      # the footer woule be auto-updated.
+github_username: 0xmahmoudjo0     # modify this account to yours
+weibo_username: ""      # no Weibo account configured
 
 # Build settings
-paginate: 10                # nums of posts in one page
+paginate: 10                # number of posts per page
 ```
 
 For more options, please check out [Jekyll - Official Site](http://jekyllrb.com/). 
@@ -74,7 +74,7 @@ Most of them are very descriptive so feel brave to dive into code directly as we
 Posts are simply just Markdown files in the `_posts/`. 
 Metadata of posts are listed in a YAML style _front-matter_.
 
-For instance, [Hello 2015])(https://huangxuan.me/2015/01/29/hello-2015/) has the front-matter of this:
+For instance, a post on this site uses the following front-matter:
 
 ```yml
 ---
@@ -82,7 +82,7 @@ layout:     post
 title:      "Hello 2015"
 subtitle:   " \"Hello World, Hello Blog\""
 date:       2015-01-29 12:00:00
-author:     "Hux"
+author:     "Mahmoud Youssef"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
@@ -103,7 +103,7 @@ This command will automatially generate a sample post similar as above under the
 
 There are a bunch of _advanced_ configs:
 
-1. a _text style_ header like [this](https://huangxuan.me/2019/09/08/spacemacs-workflow/) with
+1. a _text style_ header with:
 
 ```yml
 header-style: text 
@@ -126,7 +126,7 @@ Etc.
 
 ### SideBar
 
-![](http://huangxuan.me/img/blog-sidebar.jpg)
+![](/img/blog-sidebar.jpg)
 
 **SideBar** provides possible modules to show off more personal information.
 
@@ -183,7 +183,7 @@ friends: [
 
 ### Keynote Layout
 
-![](http://huangxuan.me/img/blog-keynote.jpg)
+![](/img/blog-keynote.jpg)
 
 There is a increased trend to use Open Web technology for keynotes and presentations via Reveal.js, Impress.js, Slides, Prezi etc. I consider a modern blog should have first-class support to embed these HTML based presentation so **Keynote layout** are made.
 
@@ -192,7 +192,7 @@ To use, in the **front-matter**:
 ```yml
 ---
 layout:     keynote
-iframe:     "http://huangxuan.me/js-module-7day/"
+iframe:     "https://0xmahmoudjo0.github.io/js-module-7day/"
 ---
 ```
 
@@ -231,7 +231,7 @@ ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 
 # Google Analytics
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_domain: 0xmahmoudjo0.github.io
 ```
 
 Just checkout the code offered by Google/Baidu, and copy paste here, all the rest is already done for you.
@@ -241,10 +241,10 @@ Just checkout the code offered by Google/Baidu, and copy paste here, all the res
 
 ### SEO Title
 
-Before V1.4, site setting `title` is not only used for displayed in Home Page and Navbar, but also used to generate the `<title>` in HTML.
-It's possible that you want the two things different. For me, my site-title is **“Hux Blog”** but I want the title shows in search engine is **“黄玄的博客 | Hux Blog”** which is multi-language.
+Before V1.4, the site setting `title` was used both for the homepage/navbar display and the HTML `<title>` output.
+If you want a different SEO title, set `SEOTitle` separately from `title`. The `SEOTitle` value is used for the browser and search engine page title without changing the visible site title.
 
-So, the SEO Title is introduced to solve this problem, you can set `SEOTitle` different from `title`, and it would be only used to generate HTML `<title>` and setting DuoShuo Sharing.
+With `SEOTitle` you can keep `title` as the visible brand name and use a more descriptive title for search engines.
 
 
 FAQ
@@ -273,14 +273,13 @@ Releases
 
 #### V1.8
 
-- Brand new [Archive](https://huangxuan.me/archive/) page! It combines previous Archive and Tag page and it's backward-cmpatible.
-Shout out to [@kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) of bringing this idea. 
-- Improve engineering by extracting duplicated liquid templates into reuseable includes. This was proposed in #74 by @Kaijun but postponed for entirely 2.5 years! I wasn't able to merge his PR directly because of long-time divegence but the credit is belonging to @Kaijun.
-- Improved code block. Long-wanted line number are supported out of the box (thanks for @SmilingParadise's help from Sina Weibo), the default theme is updated to Atom One Dark as well (checkout FQA for how to change to your farovite theme)
-- MathJax support by @Voleking in #80. I choose to use the SVG renderer though. See [Mathjax, kramdown and Octopress](https://www.lucypark.kr/blog/2013/02/25/mathjax-kramdown-and-octopress/) for writing and escaping details.
-- Open Graph Protocol support by @Android-KitKat in #253
-- `header-img-credit` and `header-img-credit-href`
-- `nav-style: invert` and `header-style: text`
+- Brand new Archive page that combines the previous Archive and Tag pages while maintaining backward compatibility.
+- Improved engineering by extracting duplicated Liquid templates into reusable includes. This was proposed in #74 by @Kaijun.
+- Improved code block support with long-awaited line numbers and a default theme update.
+- Added MathJax support by @Voleking in #80.
+- Added Open Graph Protocol support by @Android-KitKat in #253.
+- Added `header-img-credit` and `header-img-credit-href`.
+- Added support for `nav-style: invert` and `header-style: text`.
 
 #### V1.7
 
@@ -294,7 +293,7 @@ Shout out to [@kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-
 
 - Feeling annoyed to delete my blog post after clone or pull? Try **Boilerplate (Beta)** to help you get started quickly and easily merge update.
 - `-apple-system` is added in font rule, which display beautiful new font **San Francisco** in iOS 9 by default.
-- Fixed [issue#15](https://github.com/Huxpro/huxpro.github.io/issues/15) about code wrap.
+- Fixed [issue#15](https://github.com/0xmahmoudjo0/0xmahmoudjo0.github.io/issues/15) about code wrap.
 
 #### V1.5.1
 

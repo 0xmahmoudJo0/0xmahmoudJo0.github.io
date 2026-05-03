@@ -1,7 +1,7 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
-  "description": "About an engineer & designer who loves web.",
+  "name": "Mahmoud Youssef Blog",
+  "short_name": "Mahmoud Blog",
+  "description": "Personal blog for Mahmoud Youssef about web development and engineering.",
   "icons": [{
     "src": "icons/128.png",
     "sizes": "128x128",

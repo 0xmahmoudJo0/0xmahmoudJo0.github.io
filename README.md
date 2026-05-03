@@ -1,28 +1,24 @@
-[Hux Blog](https://huangxuan.me)
-================================
+# Mahmoud Youssef
 
-> I never expected this to become popular.
-
-![](http://huangxuan.me/img/blog-desktop.jpg)
-
+A personal blog repository for Mahmoud Youssef. This site is built with Jekyll and serves English content about web development, programming, and engineering.
 
 [User Manual 👉](_doc/Manual.md)
 --------------------------------------------------
 
 ### Getting Started
 
-1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
+1. Install [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/).
 
-2. Installed dependencies in the `Gemfile`:
+2. Install dependencies from the `Gemfile`:
 
 ```sh
-$ bundle install 
+$ bundle install
 ```
 
-3. Serve the website (`localhost:4000` by default):
+3. Serve the website locally:
 
 ```sh
-$ bundle exec jekyll serve  # alternatively, npm start
+$ bundle exec jekyll serve
 ```
 
 ### Development (Build From Source)
@@ -42,22 +38,13 @@ This theme uses the default code syntax highlighter of jekyll, [Rouge](http://ro
 Other Resources
 ---------------
 
-Ports
-- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
-- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
-
-[Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
-- Out of date. Helps wanted for updating it on par with the main repo
-
-Translation
-- [🇨🇳  中文文档（有点过时）](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
-
+This repository is a Jekyll-based blog site for Mahmoud Youssef.
 
 License
 -------
 
 Apache License 2.0.
-Copyright (c) 2015-present Huxpro
+Copyright (c) 2015-present Mahmoud Youssef
 
-Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
+This site is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
 Copyright (c) 2013-2016 Blackrock Digital LLC.
